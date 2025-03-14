@@ -1,0 +1,97 @@
+[
+  {
+    "ContainingType": "MailSenderAPI.Controllers.EmailController",
+    "Method": "SendEmail",
+    "RelativePath": "api/email/sendMail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "emailRequest",
+        "Type": "MailSenderAPI.Models.EmailRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MailSenderAPI.Controllers.SmtpSettingsController",
+    "Method": "GetById",
+    "RelativePath": "api/email/settings/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MailSenderAPI.Controllers.SmtpSettingsController",
+    "Method": "Create",
+    "RelativePath": "api/email/settings/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "smtpSettings",
+        "Type": "MailSenderAPI.Models.SmtpSettings",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MailSenderAPI.Controllers.SmtpSettingsController",
+    "Method": "Delete",
+    "RelativePath": "api/email/settings/delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MailSenderAPI.Controllers.SmtpSettingsController",
+    "Method": "Update",
+    "RelativePath": "api/email/settings/edit/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "smtpSettings",
+        "Type": "MailSenderAPI.Models.SmtpSettings",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MailSenderAPI.Controllers.SmtpSettingsController",
+    "Method": "GetSmtpSettings",
+    "RelativePath": "api/email/settings/list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
