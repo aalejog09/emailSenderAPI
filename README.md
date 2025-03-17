@@ -85,7 +85,7 @@ Los datos de los Json estan especificados en el servicio de **SWAGGER** configur
 
 puedes configurar un smtp a travez de los endpoints de settings:
 
-**Crear un smtp** HTTP POST [CrearEmailSender]({{server}}/api/email/settings/create) 
+**Crear un smtp** HTTP POST [CrearEmailSender] **server/api/email/settings/create**
 ```json
 {
     "host": "smtp.correo.com",
@@ -99,7 +99,7 @@ puedes configurar un smtp a travez de los endpoints de settings:
 
 PD: siempre que se cree un nuevo SMTP settigns se usara el ultimo registrado.
 
-**Listar los SMTP configurados** HTTP GET [listadeEmailSenders]({{server}}/api/email/settings/list]) 
+**Listar los SMTP configurados** HTTP GET [listadeEmailSenders] **server/api/email/settings/list** 
 
 Se registra una lista de SMTP para llevar un historial de los smtp configurados. ya que el servicio de envio de correos tomara el ultimo configurado. (el campo Password se muestra cifrado)
 
@@ -118,11 +118,11 @@ Se registra una lista de SMTP para llevar un historial de los smtp configurados.
 ]
 ```
 
-**Eliminar un SMTP** HTTP: DELETE  [EliminarEmailSender]({{server}}/api/email/settings/delete/{id}) 
+**Eliminar un SMTP** HTTP: DELETE  [EliminarEmailSender] **server:port/api/email/settings/delete/{id}**
 
 #### API enviar correo.
 
-El Api para enviar correos recibe una peticion al end point [enviar_correo]({{server}}/api/email/sendMail) el cuerpo de esta peticion es :
+El Api para enviar correos recibe una peticion al end point [enviar_correo] **server:port/api/email/sendMail** el cuerpo de esta peticion es :
 
 ``` json
 {
