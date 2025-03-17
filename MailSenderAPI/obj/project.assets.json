@@ -4650,11 +4650,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\proyectos\\NetCore\\MailSenderAPI\\MailSenderAPI\\MailSenderAPI.csproj",
+      "projectUniqueName": "C:\\proyectos\\personal\\emailSenderAPI\\MailSenderAPI\\MailSenderAPI.csproj",
       "projectName": "MailSenderAPI",
-      "projectPath": "C:\\proyectos\\NetCore\\MailSenderAPI\\MailSenderAPI\\MailSenderAPI.csproj",
+      "projectPath": "C:\\proyectos\\personal\\emailSenderAPI\\MailSenderAPI\\MailSenderAPI.csproj",
       "packagesPath": "C:\\Users\\administrador\\.nuget\\packages\\",
-      "outputPath": "C:\\proyectos\\NetCore\\MailSenderAPI\\MailSenderAPI\\obj\\",
+      "outputPath": "C:\\proyectos\\personal\\emailSenderAPI\\MailSenderAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

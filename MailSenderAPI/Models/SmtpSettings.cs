@@ -9,5 +9,6 @@
         public string Password { get; set; }
         public bool UseSSL { get; set; }
         public string FromEmail { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }

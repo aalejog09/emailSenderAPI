@@ -17,7 +17,7 @@ namespace MailSenderAPI.Controllers
         }
 
 
-        [HttpPut("edit/{id}")]
+        /*[HttpPut("edit/{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] SmtpSettings smtpSettings)
         {
             if (smtpSettings == null || id != smtpSettings.Id)
@@ -31,8 +31,8 @@ namespace MailSenderAPI.Controllers
                 return NotFound();
             }
 
-            return Ok(updatedSmtpSettings);
-        }
+           return Ok(updatedSmtpSettings);
+        } */
 
 
         [HttpGet("list")]

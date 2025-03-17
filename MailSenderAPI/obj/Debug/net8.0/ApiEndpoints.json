@@ -65,27 +65,6 @@
   },
   {
     "ContainingType": "MailSenderAPI.Controllers.SmtpSettingsController",
-    "Method": "Update",
-    "RelativePath": "api/email/settings/edit/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "smtpSettings",
-        "Type": "MailSenderAPI.Models.SmtpSettings",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MailSenderAPI.Controllers.SmtpSettingsController",
     "Method": "GetSmtpSettings",
     "RelativePath": "api/email/settings/list",
     "HttpMethod": "GET",

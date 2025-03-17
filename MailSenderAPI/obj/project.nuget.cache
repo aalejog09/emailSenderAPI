@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vYWp3XHaoVg=",
+  "dgSpecHash": "nC8Aie+pj6c=",
   "success": true,
-  "projectFilePath": "C:\\proyectos\\NetCore\\MailSenderAPI\\MailSenderAPI\\MailSenderAPI.csproj",
+  "projectFilePath": "C:\\proyectos\\personal\\emailSenderAPI\\MailSenderAPI\\MailSenderAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\administrador\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\administrador\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

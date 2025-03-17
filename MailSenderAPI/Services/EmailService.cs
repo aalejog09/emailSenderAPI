@@ -27,7 +27,7 @@ public class EmailService
             to = to.TrimEnd(';');
 
             // Obtener la configuración SMTP desde la base de datos
-            var smtpSettings = await _context.SmtpSettings.OrderBy(s => s.Id).FirstOrDefaultAsync(); //trae siempre el registro mas bajo.
+            var smtpSettings = await _context.SmtpSettings.OrderBy(s => s.Id).LastOrDefaultAsync(); //trae siempre el registro mas bajo.
 
             if (smtpSettings == null)
             {

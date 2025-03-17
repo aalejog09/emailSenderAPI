@@ -17,7 +17,7 @@ namespace MailSenderAPI.Services
 
 
         // Actualizar un registro existente
-        public async Task<SmtpSettings> UpdateAsync(int id, SmtpSettings smtpSettings)
+       /* public async Task<SmtpSettings> UpdateAsync(int id, SmtpSettings smtpSettings)
         {
             var existingSmtpSettings = await _context.SmtpSettings.FirstOrDefaultAsync(s => s.Id == id);
             if (existingSmtpSettings == null)
@@ -35,7 +35,7 @@ namespace MailSenderAPI.Services
 
             await _context.SaveChangesAsync();
             return existingSmtpSettings;
-        }
+        }*/
 
 
 
@@ -54,7 +54,7 @@ namespace MailSenderAPI.Services
 
             // Cifrar la contraseña
             smtpSettings.Password = _encryptionService.Encrypt(smtpSettings.Password);
-
+            smtpSettings.CreatedAt = DateTime.Now;
             _context.SmtpSettings.Add(smtpSettings); 
             await _context.SaveChangesAsync();  
 
