@@ -16,7 +16,21 @@ La API permite el envío de correos electrónicos con contenido dinámico y sopo
 ## Requisitos
 
 - **.NET 8.0**: Asegúrate de tener instalada la versión correcta de .NET en tu máquina. Puedes descargarla desde [aquí](https://dotnet.microsoft.com/download/dotnet).
-- **SQL Server**: La aplicación usa una base de datos SQL Server para almacenar la configuración del servidor SMTP.
+- **SQL Server**: La aplicación usa una base de datos SQL Server para almacenar la configuración del servidor SMTP. Puedes descargarla desde [aquí](https://www.microsoft.com/es-es/sql-server/sql-server-downloads)
+- **Nugget packages** en la configuracion del proyecto podras observar la paqueteria requerida para su correcto funcionamiento.
+
+```xml
+ <ItemGroup>
+   <PackageReference Include="MailKit" Version="4.11.0" />
+   <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.14">
+     <PrivateAssets>all</PrivateAssets>
+     <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+   </PackageReference>
+   <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.14" />
+   <PackageReference Include="Serilog" Version="4.2.0" />
+   <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+ </ItemGroup>
+```
 
 ## Configuración
 
