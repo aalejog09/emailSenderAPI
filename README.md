@@ -26,6 +26,7 @@ La aplicación utiliza una base de datos SQL Server (v20.2) para almacenar la co
 
 La descripcion de la tabla es :
 
+```sql
 CREATE TABLE [SmtpSettings] (
     [Id] int NOT NULL IDENTITY,
     [Host] nvarchar(max) NOT NULL,
@@ -37,13 +38,14 @@ CREATE TABLE [SmtpSettings] (
     [CreatedAt] datetime2 NOT NULL,
     CONSTRAINT [PK_SmtpSettings] PRIMARY KEY ([Id])
 );
-
+```
 
 ### AppSettings.json
 
 
 el appsettings  contiene la configuracion inicial de la aplicacion, donde se debe indicar la ubicacion de la base de datos, y el puerto donde despliega la aplicacion:
 
+```json
 {
   "Logging": {
     "LogLevel": {
@@ -57,7 +59,7 @@ el appsettings  contiene la configuracion inicial de la aplicacion, donde se deb
   },
   "Urls": "http://localhost:8081"     //Puerto de la app es lo unico que se configura. Manteniendo el http:servidor:puerto . **SOLO MODIFICAR EL CAMPO PUERTO** 
 }
-
+```
 
 ### Funcionamiento del API
 
@@ -71,12 +73,14 @@ Los datos de los Json estan especificados en el servicio de **SWAGGER** configur
 
 El Api para enviar correos recibe una peticion al end point envio correo:[{{server}}/api/email/sendMail] el cuerpo de esta peticion es :
 
-
+``` json
 {
   "to": "correo@correo.com", // debe indicar solo correos validos, y si es una lista deberia ser indicada en formato : "Correo1@correo.com;correo2@correo.com" **(separados por ";")**
   "subject": "Test API Email Sender", // el Asunto del correo
   "body": "Hello World" // el cuerpo del correo, el mensaje que se envia. Puede venir en formato HTML
 }
+```
+
 
 Si almenos 1 de los correos no es valido, no se envia a ningun remitente. 
 
@@ -84,6 +88,7 @@ Si almenos 1 de los correos no es valido, no se envia a ningun remitente.
 Ademas puedes configurar un smtp a travez de los endpoints de settings:
 
 **Crear un smtp** HTTP POST [CrearEmailSender]({{server}}/api/email/settings/create) 
+```json
 {
     "host": "smtp.correo.com",
     "port": 465, //si es ssl usar el puerto seguro del proveedor de correo.
@@ -92,12 +97,15 @@ Ademas puedes configurar un smtp a travez de los endpoints de settings:
     "useSSL": true, //esto depende del puerto, si es SSL dejar en true.
     "fromEmail": "correo@correo.com"
 }
+```
 
 PD: siempre que se cree un nuevo SMTP settigns se usara el ultimo registrado.
 
 **Listar los SMTP configurados** HTTP GET [listadeEmailSenders]({{server}}/api/email/settings/list]) 
 
 Se registra una lista de SMTP para llevar un historial de los smtp configurados. ya que el servicio de envio de correos tomara el ultimo configurado. (el campo Password se muestra cifrado)
+
+```json
 [
     {
         "id": 1,
@@ -110,7 +118,7 @@ Se registra una lista de SMTP para llevar un historial de los smtp configurados.
         "createdAt": "YYYY-MM-DD HH:MM:SS"
     }
 ]
-
+```
 
 **Eliminar un SMTP** HTTP: DELETE  [EliminarEmailSender]({{server}}/api/email/settings/delete/{id}) 
 
