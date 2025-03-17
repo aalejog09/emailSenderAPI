@@ -77,7 +77,7 @@ El Api para enviar correos recibe una peticion al end point envio correo:[{{serv
 {
   "to": "correo@correo.com", // debe indicar solo correos validos, y si es una lista deberia ser indicada en formato : "Correo1@correo.com;correo2@correo.com" **(separados por ";")**
   "subject": "Test API Email Sender", // el Asunto del correo
-  "body": "Hello World" // el cuerpo del correo, el mensaje que se envia. Puede venir en formato HTML
+  "body": "<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Correo de Prueba</title><style>body {font-family: Arial, sans-serif;line-height: 1.6;background-color: #f4f4f4;margin: 0;padding: 0;} .email-container {width: 100%;background-color: #ffffff;padding: 20px;margin: 20px auto;max-width: 600px;border-radius: 8px;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);} .header {text-align: center;font-size: 24px;margin-bottom: 20px;} .content {font-size: 16px;color: #333333;margin-bottom: 20px;} .footer {font-size: 14px;text-align: center;color: #888888;} .footer a {color: #888888;text-decoration: none;}</style></head><body><div class='email-container'><div class='header'><h2>Saludos,</h2></div><div class='content'><p>Está recibiendo esta información: <strong>Informacion</strong> desde el API de envío de correos.</p><p><strong>Otro contenido dinamico</strong></p></div><div class='footer'><p><strong>No-Reply</strong></p><p>Este es un correo automatizado, por favor no responda.</p></div></div></body></html>"
 }
 ```
 
@@ -127,6 +127,6 @@ Se registra una lista de SMTP para llevar un historial de los smtp configurados.
     <p><strong>Desarrollado por Andrés Alejo</strong></p>
     <p>Marzo de 2025</p>
     <hr>
-    <p>[Visita mi GitHub](https://github.com/aalejog09)</p>
+    <p><a href="https://github.com/aalejog09" target="_blank">Visita mi GitHub</a></p>
     <p>© 2025. Todos los derechos reservados.</p>
 </div>
