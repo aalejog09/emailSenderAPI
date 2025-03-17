@@ -16,7 +16,21 @@ La API permite el envío de correos electrónicos con contenido dinámico y sopo
 ## Requisitos
 
 - **.NET 8.0**: Asegúrate de tener instalada la versión correcta de .NET en tu máquina. Puedes descargarla desde [aquí](https://dotnet.microsoft.com/download/dotnet).
-- **SQL Server**: La aplicación usa una base de datos SQL Server para almacenar la configuración del servidor SMTP.
+- **SQL Server**: La aplicación usa una base de datos SQL Server para almacenar la configuración del servidor SMTP. Puedes descargarla desde [aquí](https://www.microsoft.com/es-es/sql-server/sql-server-downloads)
+- **Nugget packages** en la configuracion del proyecto podras observar la paqueteria requerida para su correcto funcionamiento.
+
+```xml
+ <ItemGroup>
+   <PackageReference Include="MailKit" Version="4.11.0" />
+   <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.14">
+     <PrivateAssets>all</PrivateAssets>
+     <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+   </PackageReference>
+   <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.14" />
+   <PackageReference Include="Serilog" Version="4.2.0" />
+   <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+ </ItemGroup>
+```
 
 ## Configuración
 
@@ -108,7 +122,7 @@ Se registra una lista de SMTP para llevar un historial de los smtp configurados.
 
 #### API enviar correo.
 
-El Api para enviar correos recibe una peticion al end point envio correo:[{{server}}/api/email/sendMail] el cuerpo de esta peticion es :
+El Api para enviar correos recibe una peticion al end point [enviar_correo]({{server}}/api/email/sendMail) el cuerpo de esta peticion es :
 
 ``` json
 {
@@ -119,7 +133,7 @@ El Api para enviar correos recibe una peticion al end point envio correo:[{{serv
 ```
 
 
-**Si almenos 1 de los correos no es valido, no se envia a ningun remitente.** 
+**Si almenos 1 de los correos no es valido, no se envia a ningun destinatario.** 
 
 
 
